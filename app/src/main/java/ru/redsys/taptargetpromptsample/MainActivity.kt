@@ -12,7 +12,6 @@ const val keyShowPrompt = "didShowPrompt"
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                     .setPrimaryText("Click me")
                     .setSecondaryText("I'm fab")
                     .setBackButtonDismissEnabled(true)
-                    .setPromptStateChangeListener { prompt, state ->
+                    .setPromptStateChangeListener { _, state ->
                         if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED ||
                                 state == MaterialTapTargetPrompt.STATE_NON_FOCAL_PRESSED) {
 
